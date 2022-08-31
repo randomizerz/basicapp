@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Basic App</string>
     <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Please write your user id</string>
+    <string name="password">Please write your password</string>
 </resources>
