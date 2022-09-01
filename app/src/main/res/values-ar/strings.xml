@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Basic App</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">مستخدم جديد</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+</resources>
