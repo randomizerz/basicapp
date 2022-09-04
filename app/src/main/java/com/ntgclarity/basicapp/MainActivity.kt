@@ -2,11 +2,9 @@ package com.ntgclarity.basicapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -27,7 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         if (view?.id == R.id.btn_login) {
-            val username = etUsername?.text
+            /*val username = etUsername?.text
 
             if (TextUtils.isEmpty(username)) {
                 Toast.makeText(this, "Username cannot be empty!", Toast.LENGTH_SHORT)
@@ -35,7 +33,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             } else {
                 Toast.makeText(this, "Well done!", Toast.LENGTH_SHORT)
                     .show()
-            }
+            }*/
+            val intent = Intent(this, ItemsActivity::class.java)
+
+            startActivity(intent)
         } else if (view?.id == R.id.btn_register) {
             val intent = Intent(this, RegistrationActivity::class.java)
 
