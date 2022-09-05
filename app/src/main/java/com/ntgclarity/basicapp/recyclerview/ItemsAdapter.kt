@@ -1,4 +1,4 @@
-package com.ntgclarity.basicapp
+package com.ntgclarity.basicapp.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ntgclarity.basicapp.R
 
 class ItemsAdapter(var items: List<String>) : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {

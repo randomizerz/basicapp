@@ -1,8 +1,9 @@
-package com.ntgclarity.basicapp
+package com.ntgclarity.basicapp.recyclerview
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.ntgclarity.basicapp.R
 
 class ItemsActivity : AppCompatActivity() {
     private var adapter: ItemsAdapter? = null

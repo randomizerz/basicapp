@@ -4,4 +4,7 @@
     <string name="register">Register</string>
     <string name="username">Please write your user id</string>
     <string name="password">Please write your password</string>
+    <string name="add_one">Add 1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
