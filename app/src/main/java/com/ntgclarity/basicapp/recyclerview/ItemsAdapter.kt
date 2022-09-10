@@ -8,8 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ntgclarity.basicapp.R
+import com.ntgclarity.basicapp.news.Article
 
-class ItemsAdapter(var items: List<String>) : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
+class ItemsAdapter(var items: List<Article?>?) :
+    RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var ivPhoto: ImageView? = null
         var tvTitle: TextView? = null
@@ -20,13 +22,6 @@ class ItemsAdapter(var items: List<String>) : RecyclerView.Adapter<ItemsAdapter.
 
             itemView.setOnClickListener(object : View.OnClickListener {
                 override fun onClick(view: View?) {
-                    items = listOf(
-                        "https://picsum.photos/200/200",
-                        "https://picsum.photos/200/210",
-                        "https://picsum.photos/300/210"
-                    )
-
-                    notifyDataSetChanged()
                 }
             })
         }
@@ -40,14 +35,16 @@ class ItemsAdapter(var items: List<String>) : RecyclerView.Adapter<ItemsAdapter.
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+        val article = items?.get(position)
+
         Glide.with(holder.itemView)
-            .load(items[position])
+            .load(article?.urlToImage)
             .into(holder.ivPhoto!!)
 
-        holder.tvTitle?.text = items[position]
+        holder.tvTitle?.text = article?.title
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return items?.size ?: 0
     }
 }
