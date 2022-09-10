@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.ntgclarity.basicapp.recyclerview.ItemsActivity
+import com.ntgclarity.basicapp.storage.StorageActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     var etUsername: EditText? = null
@@ -35,12 +36,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "Well done!", Toast.LENGTH_SHORT)
                     .show()
             }*/
-            val intent = Intent(this, ItemsActivity::class.java)
+            /*val intent = Intent(this, ItemsActivity::class.java)
 
-            startActivity(intent)
+            startActivity(intent)*/
             /*val intent = Intent(this, TwoFragmentsActivity::class.java)
 
             startActivity(intent)*/
+            val intent = Intent(this, StorageActivity::class.java)
+
+            startActivity(intent)
+
         } else if (view?.id == R.id.btn_register) {
             val intent = Intent(this, RegistrationActivity::class.java)
 
